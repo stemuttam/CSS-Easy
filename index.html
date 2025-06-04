@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card - Simple CSS</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter font */
+            background-color: #f7fafc; /* Equivalent to bg-gray-100 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default body margin */
+            padding: 16px; /* Add some padding for smaller screens */
+            box-sizing: border-box;
+        }
+
+        /* Product Card Container */
+        .product-card {
+            background-color: #ffffff; /* Equivalent to bg-white */
+            border-radius: 0.5rem; /* Equivalent to rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Equivalent to shadow-lg */
+            overflow: hidden; /* Equivalent to overflow-hidden */
+            width: 100%; /* Full width up to max-width */
+            max-width: 20rem; /* Equivalent to max-w-xs, approx 320px */
+        }
+
+        /* Product Image Area */
+        .product-image-container {
+            width: 100%;
+            height: 16rem; /* Equivalent to h-64, approx 256px */
+            background-color: #e2e8f0; /* Equivalent to bg-gray-200 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Equivalent to object-cover */
+        }
+
+        /* Product Details Section */
+        .product-details {
+            padding: 1.5rem; /* Equivalent to p-6 */
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center text */
+        }
+
+        /* Product Title */
+        .product-title {
+            font-size: 1.5rem; /* Equivalent to text-2xl */
+            font-weight: 600; /* Equivalent to font-semibold */
+            color: #2d3748; /* Equivalent to text-gray-800 */
+            margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+        }
+
+        /* Product Price */
+        .product-price {
+            font-size: 1.25rem; /* Equivalent to text-xl */
+            color: #718096; /* Equivalent to text-gray-600 */
+            margin-bottom: 1rem; /* Equivalent to mb-4 */
+        }
+
+        /* Buy Now Button */
+        .buy-button {
+            background-color: #4299e1; /* Equivalent to bg-blue-500 */
+            color: #ffffff; /* Equivalent to text-white */
+            font-weight: bold; /* Equivalent to font-bold */
+            padding: 0.75rem 1.5rem; /* Equivalent to py-3 px-6 */
+            border-radius: 0.5rem; /* Equivalent to rounded-lg */
+            border: none; /* Remove default button border */
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Equivalent to shadow-md */
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+        }
+
+        .buy-button:hover {
+            background-color: #3182ce; /* Equivalent to hover:bg-blue-600 */
+            transform: translateY(-2px); /* Slight lift on hover */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Enhanced shadow on hover */
+        }
+
+        /* Responsive adjustments for smaller screens if needed */
+        @media (min-width: 640px) { /* sm breakpoint */
+            .product-card {
+                max-width: 24rem; /* Equivalent to sm:max-w-sm, approx 384px */
+            }
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .product-card {
+                max-width: 28rem; /* Equivalent to md:max-w-md, approx 448px */
+            }
+        }
+
+    </style>
+    <!-- Link to Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Product Card Container -->
+    <div class="product-card">
+        <!-- Product Image -->
+        <div class="product-image-container">
+            <!-- Placeholder image -->
+            <img src="https://placehold.co/400x300/E2E8F0/A0AEC0?text=Product+Image"
+                 alt="Product Image"
+                 onerror="this.onerror=null;this.src='https://placehold.co/400x300/E2E8F0/A0AEC0?text=Image+Not+Found';">
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-details">
+            <!-- Product Title -->
+            <h2 class="product-title">
+                Awesome Product
+            </h2>
+
+            <!-- Product Price -->
+            <p class="product-price">
+                ₹99.99
+            </p>
+
+            <!-- Buy Now Button -->
+            <button class="buy-button">
+                Buy Now
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
